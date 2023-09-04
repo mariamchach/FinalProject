@@ -10,9 +10,10 @@ public class LoginPage {
     public SelenideElement
             confirmbutton = $(byText("ვეთანხმები")),
             authorizationbutton = $(byId("continueButton2")),
-            emailinput = $(byClassName("sc-873df991-2"),0),
-            passwordinput =  $(byClassName("sc-873df991-2"), 1),
-            loginbutton =   $(byId("continueButton2"), 0);
+            emailinput = $(byClassName("sc-873df991-2"), 0),
+            passwordinput = $(byClassName("sc-873df991-2"), 1),
+            loginbutton = $(byId("continueButton2"), 0),
+            errortxt = $(byText("მომხმარებლის სახელი და პაროლი არასწორია"));
 
 
 }

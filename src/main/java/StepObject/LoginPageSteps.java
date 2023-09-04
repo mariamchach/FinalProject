@@ -1,36 +1,41 @@
 package StepObject;
-
 import PageObject.LoginPage;
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
+
+import java.time.Duration;
 
 public class LoginPageSteps extends LoginPage {
-    public LoginPageSteps Confirm (){
+    @Step("პოპ აპის გათიშვა")
+    public LoginPageSteps Confirm() {
         confirmbutton.click();
         return this;
     }
-    public LoginPageSteps AuthorizationButton(){
+
+    @Step("ავტორიზაციის ბათონზე დაკლიკება")
+    public LoginPageSteps AuthorizationButton() {
         authorizationbutton.click();
         return this;
     }
-    public LoginPageSteps Email (String email){
+
+    @Step("მეილის ინფუთის შევსება მნიშვნელობით: {email}")
+    public LoginPageSteps Email(String email) {
         emailinput.setValue(email);
         emailinput.shouldNotBe(Condition.empty);
         return this;
     }
-    public LoginPageSteps Password (String password){
+
+    @Step("ფასვორდის ინფუთის შევსება მნიშვნელობით: {password}")
+    public LoginPageSteps Password(String password) {
         passwordinput.setValue(password);
         passwordinput.shouldNotBe(Condition.empty);
         return this;
     }
-    public LoginPageSteps LoginButton (){
+
+    @Step("შესვლა ღილაკზე დაკლიკება")
+    public LoginPageSteps LoginButton() {
         loginbutton.click();
         return this;
     }
-
-
-
-
-
-
 
 }
