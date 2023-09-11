@@ -1,4 +1,5 @@
 package StepObject;
+
 import PageObject.LoginPage;
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
@@ -32,10 +33,24 @@ public class LoginPageSteps extends LoginPage {
         return this;
     }
 
+    @Step("ფასვორდის ინფუთის შევსება მნიშვნელობით: {passwordforpos}")
+    public LoginPageSteps PasswordForPos(String passwordforpos) {
+        passwordinput.setValue(passwordforpos);
+        passwordinput.shouldNotBe(Condition.empty);
+        return this;
+    }
+
     @Step("შესვლა ღილაკზე დაკლიკება")
     public LoginPageSteps LoginButton() {
         loginbutton.click();
         return this;
     }
 
+    @Step("პროფილის აიქონის გამოჩენა")
+    public LoginPageSteps ProfileIcon() {
+        profileicon.shouldBe(Condition.visible);
+        return this;
+    }
 }
+
+

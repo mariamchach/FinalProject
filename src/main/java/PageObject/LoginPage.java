@@ -13,6 +13,7 @@ public class LoginPage {
             emailinput = $(byClassName("sc-873df991-2"), 0),
             passwordinput = $(byClassName("sc-873df991-2"), 1),
             loginbutton = $(byId("continueButton2"), 0),
+            profileicon = $(byClassName("sc-4af2ab87-0")),
             errortxt = $(byText("მომხმარებლის სახელი და პაროლი არასწორია"));
 
 
